@@ -17,7 +17,9 @@ const Navbar = () => {
             {/* menu */}
             <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3">
                <li>
-                  <a href="#top">Home</a>
+                  <a className="font-Ovo" href="#top">
+                     Home
+                  </a>
                </li>
                <li>
                   <a href="#about">About me</a>

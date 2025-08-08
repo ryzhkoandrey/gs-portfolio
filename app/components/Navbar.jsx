@@ -63,6 +63,28 @@ const Navbar = () => {
                   <Image src={assets.menu_black} alt="" className="w-6" />
                </button>
             </div>
+
+            {/* mobile menu */}
+            <ul
+               className="flex md:hidden flex-col gap-4 py-20 px-10 fixed right-0 top-0 bottom-0
+               w-64 z-50 h-screen bg-rose-50 transition duration-500"
+            >
+               <li>
+                  <a href="#top">Home</a>
+               </li>
+               <li>
+                  <a href="#about">About me</a>
+               </li>
+               <li>
+                  <a href="#services">Services</a>
+               </li>
+               <li>
+                  <a href="#work">My work</a>
+               </li>
+               <li>
+                  <a href="#contact">Contact me</a>
+               </li>
+            </ul>
          </nav>
       </>
    );

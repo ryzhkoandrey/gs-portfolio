@@ -1,5 +1,5 @@
-import { useRef } from 'react';
 import Image from 'next/image';
+import { useRef } from 'react';
 import { assets } from '@/assets/assets';
 
 const Navbar = () => {
@@ -70,7 +70,10 @@ const Navbar = () => {
                </a>
 
                {/* menu btn */}
-               <button className="block md:hidden ml-3" onClick={openMenu}>
+               <button
+                  className="block md:hidden ml-3 cursor-pointer"
+                  onClick={openMenu}
+               >
                   <Image src={assets.menu_black} alt="" className="w-6" />
                </button>
             </div>
@@ -91,19 +94,29 @@ const Navbar = () => {
                </div>
 
                <li>
-                  <a href="#top">Home</a>
+                  <a href="#top" onClick={closeMenu}>
+                     Home
+                  </a>
                </li>
                <li>
-                  <a href="#about">About me</a>
+                  <a href="#about" onClick={closeMenu}>
+                     About me
+                  </a>
                </li>
                <li>
-                  <a href="#services">Services</a>
+                  <a href="#services" onClick={closeMenu}>
+                     Services
+                  </a>
                </li>
                <li>
-                  <a href="#work">My work</a>
+                  <a href="#work" onClick={closeMenu}>
+                     My work
+                  </a>
                </li>
                <li>
-                  <a href="#contact">Contact me</a>
+                  <a href="#contact" onClick={closeMenu}>
+                     Contact me
+                  </a>
                </li>
             </ul>
          </nav>

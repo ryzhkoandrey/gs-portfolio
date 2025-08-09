@@ -1,7 +1,18 @@
+import { useRef } from 'react';
 import Image from 'next/image';
 import { assets } from '@/assets/assets';
 
 const Navbar = () => {
+   const sideMenuRef = useRef();
+
+   const openMenu = () => {
+      sideMenuRef.current.style.transform = 'translateX(-16rem)';
+   };
+
+   const closeMenu = () => {
+      sideMenuRef.current.style.transform = 'translateX(16rem)';
+   };
+
    return (
       <>
          {/* background */}
@@ -59,16 +70,26 @@ const Navbar = () => {
                </a>
 
                {/* menu btn */}
-               <button className="block md:hidden ml-3">
+               <button className="block md:hidden ml-3" onClick={openMenu}>
                   <Image src={assets.menu_black} alt="" className="w-6" />
                </button>
             </div>
 
             {/* mobile menu */}
             <ul
-               className="flex md:hidden flex-col gap-4 py-20 px-10 fixed right-0 top-0 bottom-0
+               ref={sideMenuRef}
+               className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0
                w-64 z-50 h-screen bg-rose-50 transition duration-500"
             >
+               {/* close */}
+               <div className="absolute right-6 top-6" onClick={closeMenu}>
+                  <Image
+                     src={assets.close_black}
+                     className="w-5 cursor-pointer"
+                     alt=""
+                  />
+               </div>
+
                <li>
                   <a href="#top">Home</a>
                </li>

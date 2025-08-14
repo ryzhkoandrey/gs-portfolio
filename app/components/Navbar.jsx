@@ -17,14 +17,10 @@ const Navbar = () => {
 
    useEffect(() => {
       window.addEventListener('scroll', () => {
-         if (scrollY > 50) {
+         if (scrollY > 100) {
             setIsScroll(true);
-            console.log(scrollY);
-            console.log(isScroll);
          } else {
             setIsScroll(false);
-            console.log(scrollY);
-            console.log(isScroll);
          }
       });
    }, []);
@@ -36,7 +32,11 @@ const Navbar = () => {
             <Image src={assets.header_bg_color} alt="" className="w-full" />
          </div>
 
-         <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+         <nav
+            className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50
+               transition duration-300
+               ${isScroll ? 'bg-white/50 backdrop-blur-lg shadow-sm' : ''}`}
+         >
             {/* logo */}
             <a href="#top">
                <Image

@@ -1,8 +1,10 @@
 import Image from 'next/image';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { assets } from '@/assets/assets';
 
 const Navbar = () => {
+   const [isScroll, setIsScroll] = useState(false);
+
    const sideMenuRef = useRef();
 
    const openMenu = () => {
@@ -12,6 +14,20 @@ const Navbar = () => {
    const closeMenu = () => {
       sideMenuRef.current.style.transform = 'translateX(16rem)';
    };
+
+   useEffect(() => {
+      window.addEventListener('scroll', () => {
+         if (scrollY > 50) {
+            setIsScroll(true);
+            console.log(scrollY);
+            console.log(isScroll);
+         } else {
+            setIsScroll(false);
+            console.log(scrollY);
+            console.log(isScroll);
+         }
+      });
+   }, []);
 
    return (
       <>
@@ -55,7 +71,7 @@ const Navbar = () => {
             {/* btns */}
             <div className="flex items-center gap-4">
                {/* theme btn */}
-               <button>
+               <button className="cursor-pointer">
                   <Image src={assets.moon_icon} alt="" className="w-6" />
                </button>
 

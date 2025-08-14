@@ -4,7 +4,6 @@ import { assets } from '@/assets/assets';
 
 const Navbar = () => {
    const [isScroll, setIsScroll] = useState(false);
-
    const sideMenuRef = useRef();
 
    const openMenu = () => {
@@ -48,8 +47,8 @@ const Navbar = () => {
 
             {/* menu */}
             <ul
-               className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3
-               font-Ovo bg-white/50 shadow-sm"
+               className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 font-Ovo
+                  ${isScroll ? '' : 'bg-white/50 shadow-sm'}`}
             >
                <li>
                   <a href="#top">Home</a>

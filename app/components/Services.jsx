@@ -15,20 +15,27 @@ const Services = () => {
          </p>
 
          {/* list */}
-         <ul className="flex">
+         <div className="grid grid-cols-auto gap-6 my-10">
             {serviceData.map(({ icon, title, description, link }, index) => (
-               <li key={index}>
+               <div
+                  key={index}
+                  className="border border-gray-400 rounded-lg px-8 py-12
+                  hover:shadow-black hover:bg-lightHover hover:-translate-y-1 duration-500"
+               >
                   {console.log(icon)}
-                  <Image src={icon} alt={title} className="w-10" />
-                  <h3>{title}</h3>
-                  <p>{description}</p>
-                  <a href={link} className="flex items-center gap-2">
+                  <Image src={icon} alt="" className="w-10" />
+                  <h3 className="text-lg my-4 text-gray-700">{title}</h3>
+                  <p className="text-sm text-gray-600 leading-5">{description}</p>
+                  <a
+                     href={link}
+                     className="inline-flex items-center gap-2 text-sm mt-5"
+                  >
                      Read more
                      <Image src={assets.right_arrow} alt="" className="w-4" />
                   </a>
-               </li>
+               </div>
             ))}
-         </ul>
+         </div>
       </div>
    );
 };

@@ -17,7 +17,7 @@ const Header = () => {
             frontend web developer based in London.
          </h1>
 
-         <p className="max-w-2xl mx-auto text-xl font-Ovo">
+         <p className="text-xl max-w-2xl mx-auto text-xl font-Ovo">
             I am a frontend developer from California, USA with 10 years of
             experience in multiple companies like Microsoft, Tesla and Apple.
          </p>

@@ -9,7 +9,7 @@ const Work = () => {
          <h2 className="text-center text-5xl font-Ovo">My latest work</h2>
 
          {/* text */}
-         <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+         <p className="text-xl text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
             Welcome to my web development portfolio! Explore a collection of projects
             showcasing my expertise in front-end development.
          </p>

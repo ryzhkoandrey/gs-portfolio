@@ -1,3 +1,6 @@
+import { assets } from '@/assets/assets';
+import Image from 'next/image';
+
 const Contact = () => {
    return (
       <div
@@ -10,10 +13,40 @@ const Contact = () => {
          <h2 className="text-center text-5xl font-Ovo">Get in touch</h2>
 
          {/* text */}
-         <p className="text-center max-w-xl mx-auto mt-5 mb-12 font-Ovo">
+         <p className="text-xl text-center max-w-xl mx-auto mt-5 mb-12 font-Ovo">
             I'd love to hear from you! If you have any questions, comments or
             feedback, please use the form below.
          </p>
+
+         {/* form */}
+         <form className="max-w-2xl mx-auto">
+            <div className="grid grid-cols-auto gap-6 mt-10 mb-8">
+               <input
+                  type="text"
+                  placeholder="Enter your name"
+                  required
+                  className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+               />
+               <input
+                  type="email"
+                  placeholder="Enter your email"
+                  required
+                  className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+               />
+            </div>
+
+            <textarea
+               rows="6"
+               placeholder="Enter your message"
+               required
+               className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-mb bg-white mb-6 resize-none"
+            ></textarea>
+
+            <button type="submit" className="text-white flex items-center bg-black">
+               Submit now
+               <Image src={assets.right_arrow_bold_dark} alt="" className="w-4" />
+            </button>
+         </form>
       </div>
    );
 };

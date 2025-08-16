@@ -22,7 +22,7 @@ const About = () => {
             {/* info */}
             <div className="flex-1 max-w-2xl">
                {/* text */}
-               <p className="mb-10 max-w-2xl font-Ovo">
+               <p className="text-xl mb-10 max-w-2xl font-Ovo">
                   I am an experienced Frontend Developer with over a decade of
                   professional expertise in the field. Throughout my career, I have
                   had the privilege of collaborating with prestigious organizations,

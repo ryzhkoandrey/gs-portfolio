@@ -9,7 +9,7 @@ const Services = () => {
          <h2 className="text-center text-5xl font-Ovo">My services</h2>
 
          {/* text */}
-         <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+         <p className="text-xl text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
             I am a frontend developer from California, USA with 10 years of
             experience in multiple companies like Microsoft, Tesla and Apple.
          </p>
